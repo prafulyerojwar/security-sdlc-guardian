@@ -199,17 +199,20 @@ export default function DashboardPage() {
       {/* Quick Links */}
       <section>
         <h2 style={{ fontSize: "1.1rem", fontWeight: 700, marginBottom: "1rem" }}>Quick Actions</h2>
-        <div className="grid-3">
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))", gap: "1rem" }}>
           {[
-            { href: "/docs", icon: "📚", title: "Security KT Modules", desc: "8 training modules covering all security domains", color: "var(--secondary)" },
+            { href: "/threats", icon: "⚡", title: "Threat Catalog", desc: "10 threats with real incidents, CVSS, payloads, mitigations", color: "var(--danger)" },
+            { href: "/secure-coding", icon: "🔒", title: "Secure Coding", desc: "11 rules — vulnerable vs. secure code with real breaches", color: "var(--primary)" },
+            { href: "/docs", icon: "📚", title: "KT Modules", desc: "8 training modules covering all security domains", color: "var(--secondary)" },
             { href: "/flows", icon: "🔀", title: "Security Flows", desc: "Visual flows for Auth, API keys, Incident Response", color: "var(--accent)" },
-            { href: "/checklist", icon: "✅", title: "Security Checklist", desc: "Interactive checklist for every SDLC phase", color: "var(--success)" },
+            { href: "/checklist", icon: "✅", title: "Checklist", desc: "Interactive checklist for every SDLC phase", color: "var(--success)" },
+            { href: "/owasp", icon: "🎯", title: "OWASP Top 10", desc: "Critical web risks with attack examples & mitigations", color: "var(--warning)" },
           ].map((item) => (
             <Link key={item.href} href={item.href} style={{ textDecoration: "none" }}>
-              <div className="card" style={{ borderTop: `3px solid ${item.color}`, textAlign: "center", padding: "1.5rem" }}>
-                <div style={{ fontSize: "2.5rem", marginBottom: "0.75rem" }}>{item.icon}</div>
-                <div style={{ fontWeight: 700, fontSize: "0.95rem", marginBottom: 6 }}>{item.title}</div>
-                <div style={{ fontSize: "0.8rem", color: "var(--muted)", lineHeight: 1.5 }}>{item.desc}</div>
+              <div className="card" style={{ borderTop: `3px solid ${item.color}`, textAlign: "center", padding: "1.25rem" }}>
+                <div style={{ fontSize: "2rem", marginBottom: "0.6rem" }}>{item.icon}</div>
+                <div style={{ fontWeight: 700, fontSize: "0.875rem", marginBottom: 5 }}>{item.title}</div>
+                <div style={{ fontSize: "0.75rem", color: "var(--muted)", lineHeight: 1.5 }}>{item.desc}</div>
               </div>
             </Link>
           ))}

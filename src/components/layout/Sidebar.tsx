@@ -13,6 +13,8 @@ const NAV = [
     { href: "/phases/deployment", label: "Deployment" },
     { href: "/phases/operations", label: "Operations" },
   ]},
+  { href: "/threats", label: "Threat Catalog", icon: "⚡" },
+  { href: "/secure-coding", label: "Secure Coding", icon: "🔒" },
   { href: "/checklist", label: "Security Checklist", icon: "✅" },
   { href: "/flows", label: "Security Flows", icon: "🔀" },
   { href: "/docs", label: "KT & Docs", icon: "📚" },
