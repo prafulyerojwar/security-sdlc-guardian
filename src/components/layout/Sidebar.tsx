@@ -76,7 +76,7 @@ export default function Sidebar({ isOpen, onClose }: { isOpen: boolean; onClose:
 
       <aside className={`sdlc-sidebar ${isOpen ? "open" : ""}`}>
         {/* Logo */}
-        <div style={{ padding: "1.1rem 1rem", borderBottom: "1px solid var(--card-border)", flexShrink: 0 }}>
+        <div style={{ height: 60, padding: "0 1rem", borderBottom: "1px solid var(--card-border)", flexShrink: 0, display: "flex", alignItems: "center" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <div style={{ width: 34, height: 34, borderRadius: 10, background: "linear-gradient(135deg, var(--primary), var(--secondary))", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 17, flexShrink: 0 }}>🛡️</div>
             <div>
