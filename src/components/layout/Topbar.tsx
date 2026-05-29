@@ -12,7 +12,8 @@ export default function Topbar({ onMenuClick }: { onMenuClick: () => void }) {
       display: "flex", alignItems: "center", padding: "0 1.25rem",
       position: "sticky", top: 0, zIndex: 30, gap: 12,
     }}>
-      <button onClick={onMenuClick} className="md:hidden" style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.25rem", color: "var(--fg)", padding: 4 }}>☰</button>
+      <button onClick={onMenuClick} style={{ background: "none", border: "none", cursor: "pointer", fontSize: "1.25rem", color: "var(--fg)", padding: 4, display: "none" }} className="sdlc-hamburger">☰</button>
+      <style>{`@media(max-width:767px){.sdlc-hamburger{display:flex!important;}}`}</style>
 
       <div style={{ flex: 1, display: "flex", alignItems: "center", gap: 10 }}>
         <div style={{ fontSize: "0.85rem", fontWeight: 600, color: "var(--muted)" }}>Security SDLC</div>
